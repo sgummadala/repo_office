@@ -1,0 +1,138 @@
+==================GIT GitHub - Sgummadala@GMAI ACCOUNT: WORKING SCENARIO================================================
+USE DESKTOP FOLDER :  SG-TEST-GIT
+USE REPO ON GITHUB  :  REPO_OFFICE.GIT
+
+ALWAYS GET THE GIT REMOTE ADD ORIGIN WITH FORMAT BELOW 
+
+https://github.com/sgummadala/repo_office
+
+git remote add origin https://sgummadala:<token>@github.com/sgummadala/repo_office.git
+
+C:\Users\sgummadala\Desktop\sg-test-git
+
+PS C:\Users\sgummadala\Desktop\sg-test-git> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\sgummadala\Desktop\sg-test-git> git push -u origin master
+git: 'credential-manager.core' is not a git command. See 'git --help'.
+Everything up-to-date
+Branch master set up to track remote branch master from origin.
+PS C:\Users\sgummadala\Desktop\sg-test-git> git remote -v
+origin  https://sgummadala:<token>@github.com/sgummadala/repo_office.git (fetch)
+origin  https://sgummadala:<token>@github.com/sgummadala/repo_office.git (push)
+PS C:\Users\sgummadala\Desktop\sg-test-git>
+
+
+
+
+basically your remote orgin should have  value of  token-url-git-repo format
+and just push origin 
+-u option will create new branch if does not exists use the existing one 
+	
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\sgummadala\Desktop\sg-test-git> git init
+Initialized empty Git repository in C:/Users/sgummadala/Desktop/sg-test-git/.git/
+PS C:\Users\sgummadala\Desktop\sg-test-git> git add .
+PS C:\Users\sgummadala\Desktop\sg-test-git> git commit -m "First Commit"
+[master (root-commit) decd577] First Commit
+ 5 files changed, 1035 insertions(+)
+ create mode 100644 Get-FolderSizes_GB.bat
+ create mode 100644 Get-FolderSizes_GB.ps1
+ create mode 100644 Mark - SQL.sql
+ create mode 100644 mysqlsampledatabase.sql
+ create mode 100644 test.txt
+PS C:\Users\sgummadala\Desktop\sg-test-git> git remote add origin https://sgummadala:<token>@github.com/sgummadala/repo_office.git
+PS C:\Users\sgummadala\Desktop\sg-test-git> git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 58.46 KiB | 3.65 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/sgummadala/repo_office.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+PS C:\Users\sgummadala\Desktop\sg-test-git> ^C
+PS C:\Users\sgummadala\Desktop\sg-test-git>
+
+
+
+use the folder :  C:\Users\sgummadala\Desktop\sg-test-git to push files to github
+check if PAT is expired , if yes please regenerate new one update get remote add origin   and then push
+
+===================================================================================================================
+
+
+
+==================GIT cvs GitHub - 0545491 CVS ACCOUNT: WORKING SCENARIO================================================
+USE BASH SHELL:
+
+HAVE SETUP THE SSH KEYS AS USERNAME AND PAT ( TOKEN) WAS FAILING
+FOR GIT TO USE SSH AUTH INSTEAD OF USER/TOKEN  WE HAVE TO SET THE REMOTE ORGIN AS FOLLOWS
+
+USE DESKTOP FOLDER:  /c/Users/sgummadala/Desktop/new-git-test-cvs
+USE REPO ON GIT :   test-cvs.git
+USE GIT BASH SHELL 
+ git remote set-url origin git@github-retail.cvshealth.com:0545491/test-cvs.git
+ git remote set-url origin git@github.com:<username>/<repository>.git
+
+git remote set-url origin git@github-retail.cvshealth.com:0545491/test-cvs.git
+ 
+ CVS+SGummadala@DELL543074P8TT3 MINGW64 ~/Desktop/new-git-test-cvs (master)
+$ git remote -v
+origin  git@github-retail.cvshealth.com:0545491/test-cvs.git (fetch)
+origin  git@github-retail.cvshealth.com:0545491/test-cvs.git (push)
+
+CVS+SGummadala@DELL543074P8TT3 MINGW64 ~/Desktop/new-git-test-cvs (master)
+$ git push -u origin master
+key_load_public: invalid format
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 222 bytes | 222.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github-retail.cvshealth.com:0545491/test-cvs.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+
+=====INFO FOR SSH KEYS=====
+Host github.com
+     User git
+     Hostname github.com
+     PreferredAuthentications publickey
+     IdentityFile /c/Users/sgummadala/.ssh/id_ed25519
+	 
+	 THOUGH KEY FILES  DID NOT HAVE 600 AND 644 IT STILL WORKED AS IT GIT BASH SHELL NOT REGULAR LINUX SHELL
+	 umask --077
+	 700 direc
+	 600 private keys
+	 644 public  keys
+	 
+	 umask   022
+	 
+	 
+	  ssh-keygen -t ed25519 -C "Sriramulu.Gummadala@cvshealth.com"
+	 
+	 ssh-add /c/Users/sgummadala/.ssh/id_ed25519
+	 eval $(ssh-agent -s)
+     ssh-add -l -E sha256
+     ssh -v git@github-retail.cvshealth.com
+	 
+	 COPY KEY AND PASTE INTO SSH KEY ON GITHUB FOR USER 0545491  github-retail.cvshealth.com
+====================================
+
+=============GIT COPILOT ISSUE =================
+
+https://github-retail.cvshealth.com/
+
+@builtin   and look for Github Authenticator extension
+once installed it will work
+
+
+github.com is uri
+user Sriramulu_Gummadala-cvsh if asked ( did not ask )
+from copilot licenses
