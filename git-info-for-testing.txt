@@ -1,4 +1,26 @@
 ==================GIT GitHub - Sgummadala@GMAI ACCOUNT: WORKING SCENARIO================================================
+old pat ghp_xxxx
+new pat:  ghp_yyyy  expires 07252026
+
+when PAT expires you need to update the remote origin with new PAT
+in this case
+old token : 
+	git remote -v
+	PS C:\Users\sgummadala\Desktop\sg-test-git> git remote -v
+	origin  https://sgummadala:ghp_xxxx@github.com/sgummadala/repo_office.git (fetch)
+	origin  https://sgummadala:ghp_xxxx@github.com/sgummadala/repo_office.git (push)
+
+run the command to update new token
+	
+	git remote set-url origin https://sgummadala:ghp_yyyy@github.com/sgummadala/repo_office.git
+	
+	PS C:\Users\sgummadala\Desktop\sg-test-git> git remote set-url origin https://sgummadala:ghp_yyyy@github.com/sgummadala/repo_office.git
+	PS C:\Users\sgummadala\Desktop\sg-test-git> git remote -v
+	origin  https://sgummadala:ghp_yyyy@github.com/sgummadala/repo_office.git (fetch)
+	origin  https://sgummadala:ghp_yyyy@github.com/sgummadala/repo_office.git (push)
+	PS C:\Users\sgummadala\Desktop\sg-test-git> 
+	
+
 
 ================================================================================================
 github.com  login:sgumm@gmail pwd:95*cvs*
