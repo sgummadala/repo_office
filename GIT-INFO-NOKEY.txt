@@ -72,14 +72,16 @@ check if PAT is expired , if yes please regenerate new one update get remote add
 ==================GIT cvs GitHub - 0545491 CVS ACCOUNT: WORKING SCENARIO================================================
 USE BASH SHELL:
 
-HAVE SETUP THE SSH KEYS AS USERNAME AND PAT ( TOKEN) WAS FAILING
+HAVE SETUP THE SSH KEYS AS  the USERNAME AND PAT ( TOKEN) WAS FAILING
 FOR GIT TO USE SSH AUTH INSTEAD OF USER/TOKEN  WE HAVE TO SET THE REMOTE ORGIN AS FOLLOWS
+
+ git remote set-url origin git@github-retail.cvshealth.com:0545491/test-cvs.git
+ git remote set-url origin git@github.com:<username>/<repository>.git
 
 USE DESKTOP FOLDER:  /c/Users/sgummadala/Desktop/new-git-test-cvs
 USE REPO ON GIT :   test-cvs.git
 USE GIT BASH SHELL 
- git remote set-url origin git@github-retail.cvshealth.com:0545491/test-cvs.git
- git remote set-url origin git@github.com:<username>/<repository>.git
+
 
 git remote set-url origin git@github-retail.cvshealth.com:0545491/test-cvs.git
  
